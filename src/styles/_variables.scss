@@ -1,0 +1,24 @@
+// 色（架空の店 BUN & CO. 用。元テーマの配色を踏襲した「黒×クラフト紙×赤」の 3 色）
+$color-bg: #faf7f2;
+$color-bg-dark: #141414;
+$color-ink: #1c1c1c;
+$color-ink-sub: #5c5852;
+$color-accent: #c8402c;
+$color-accent-dark: #a2321f;
+$color-kraft: #c9b79c;
+$color-line: #e4ddd1;
+$color-white: #ffffff;
+
+// レイアウト
+$inner-max: 1100px;
+$gutter-sp: 20px;
+$gutter-pc: 40px;
+$header-h-sp: 64px;
+$header-h-pc: 80px;
+
+// ブレークポイント（元の responsive.css は SP / PC の 2 段構え。768px を境にする）
+$bp-tablet: 768px;
+$bp-pc: 1024px;
+
+// 動き
+$ease-out: cubic-bezier(0.22, 0.7, 0.3, 1);

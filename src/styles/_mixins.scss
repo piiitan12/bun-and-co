@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+// PC 以上（1024px〜）
+@mixin pc {
+  @media (min-width: $bp-pc) {
+    @content;
+  }
+}
+
+// タブレット以上（768px〜）
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+// SP だけ（〜767px）
+@mixin sp {
+  @media (max-width: ($bp-tablet - 1px)) {
+    @content;
+  }
+}
+
+// 内側の幅と左右余白
+@mixin inner {
+  width: 100%;
+  max-width: $inner-max;
+  margin-inline: auto;
+  padding-inline: $gutter-sp;
+  @include tablet {
+    padding-inline: $gutter-pc;
+  }
+}
+
+// 英字見出し（Oswald）
+@mixin heading-en {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

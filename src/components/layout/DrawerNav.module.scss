@@ -1,0 +1,33 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.drawer {
+  position: fixed;
+  inset: $header-h-sp 0 0 0;
+  background: $color-bg-dark;
+  color: $color-white;
+  padding: 32px $gutter-sp;
+  transform: translateX(100%);
+  transition: transform 0.35s $ease-out;
+  overflow-y: auto;
+  @include pc {
+    display: none;
+  }
+  &.isOpen {
+    transform: translateX(0);
+  }
+}
+.list {
+  display: grid;
+  gap: 4px;
+}
+.link {
+  @include heading-en;
+  display: block;
+  padding: 16px 8px;
+  font-size: 22px;
+  border-bottom: 1px solid rgba($color-white, 0.12);
+}
+.external {
+  color: $color-kraft;
+}

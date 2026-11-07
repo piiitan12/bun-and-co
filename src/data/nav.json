@@ -1,0 +1,25 @@
+{
+  "global": [
+    { "label": "TOP", "href": "/" },
+    { "label": "MENU", "href": "/menu" },
+    { "label": "GOODS", "href": "/goods" },
+    { "label": "ACCESS", "href": "/#access" },
+    { "label": "CONTACT", "href": "/contact" }
+  ],
+  "external": [
+    { "label": "Uber Eats", "href": "#", "icon": "uber" },
+    { "label": "Instagram", "href": "#", "icon": "instagram" }
+  ],
+  "footer": [
+    { "label": "TOP", "href": "/" },
+    { "label": "MENU", "href": "/menu" },
+    { "label": "GOODS", "href": "/goods" },
+    { "label": "CONTACT", "href": "/contact" },
+    { "label": "PRIVACY POLICY", "href": "/privacy-policy" }
+  ],
+  "social": [
+    { "label": "Instagram", "href": "#", "icon": "instagram" },
+    { "label": "LINE", "href": "#", "icon": "line" },
+    { "label": "Uber Eats", "href": "#", "icon": "uber" }
+  ]
+}

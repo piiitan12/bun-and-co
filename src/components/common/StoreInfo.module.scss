@@ -1,0 +1,37 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.info {
+  display: grid;
+  gap: 12px;
+  font-size: 14px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  gap: 12px;
+  dt {
+    @include heading-en;
+    font-size: 12px;
+    padding-top: 3px;
+    color: $color-accent;
+  }
+}
+.hours {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hoursLabel {
+  min-width: 5.5em;
+  color: $color-ink-sub;
+}
+.light {
+  color: $color-white;
+  .hoursLabel {
+    color: $color-kraft;
+  }
+  dt {
+    color: $color-kraft;
+  }
+}

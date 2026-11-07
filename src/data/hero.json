@@ -1,0 +1,10 @@
+{
+  "images": [
+    { "src": "/images/hero/hero-01.png", "alt": "店内のカウンターとバーガー（仮画像）" },
+    { "src": "/images/hero/hero-02.png", "alt": "焼き上がったバンズ（仮画像）" },
+    { "src": "/images/hero/hero-03.png", "alt": "鉄板で焼くパティ（仮画像）" },
+    { "src": "/images/hero/hero-04.png", "alt": "チーズをのせたバーガー（仮画像）" },
+    { "src": "/images/hero/hero-05.png", "alt": "店の外観（仮画像）" },
+    { "src": "/images/hero/hero-06.png", "alt": "テーブルに並ぶバーガーとドリンク（仮画像）" }
+  ]
+}

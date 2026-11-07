@@ -1,0 +1,32 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+.mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: $color-accent;
+  color: $color-white;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.text {
+  @include heading-en;
+  font-size: 20px;
+  letter-spacing: 0.12em;
+}
+.dark .text {
+  color: $color-ink;
+}
+.light .text {
+  color: $color-white;
+}

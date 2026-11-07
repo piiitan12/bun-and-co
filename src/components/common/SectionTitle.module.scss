@@ -1,0 +1,60 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.wrap {
+  margin-bottom: 32px;
+  @include pc {
+    margin-bottom: 48px;
+  }
+}
+.en {
+  @include heading-en;
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1.1;
+  padding-bottom: 12px;
+  @include pc {
+    font-size: 44px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background: $color-accent;
+    transform-origin: left;
+    animation: underline 0.8s $ease-out both;
+  }
+}
+.ja {
+  margin-top: 10px;
+  font-size: 13px;
+  color: $color-ink-sub;
+}
+.center {
+  text-align: center;
+  .en::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.light {
+  color: $color-white;
+  .ja {
+    color: $color-kraft;
+  }
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.center .en::after {
+  animation: none;
+}
