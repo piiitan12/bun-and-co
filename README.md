@@ -10,8 +10,8 @@
 
 ## 担当範囲
 
-- 担当：テーマ設計・HTML/CSS/JavaScript・Instagram表示連携・BGM切替・外部導線（Uber Eats／LINE）
-- 担当外：写真・アイコンの加工
+- 担当：テーマ設計・HTML/CSS/JavaScript・Instagram表示連携・BGM切替・外部導線（Uber Eats／LINE）・アイコン制作（音楽ボタン・配達アイコン）・ロゴ制作への参加
+- 担当外：写真の加工
 - React 版の写真はすべて差し替え（フリー素材または本人撮影）
 
 設計の考え方は [`docs/設計の意図.md`](docs/設計の意図.md)。構成・データ分離・WordPress 版との違いの節は全ページ完成後に書く。
