@@ -47,6 +47,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ja" className={`${notoSansJp.variable} ${oswald.variable} ${spaceGrotesk.variable}`}>
       <body>
+        {/* JS が動く環境の印。スクロール出現（FadeIn）はこの印があるときだけ要素を隠す */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <Header />
         <main id="main">{children}</main>
         <Footer />

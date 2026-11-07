@@ -1,0 +1,46 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.access {
+  background: $color-white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+  @include pc {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 64px;
+    align-items: start;
+  }
+}
+.external {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.uber,
+.line {
+  @include heading-en;
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 12px;
+  border-radius: 6px;
+  color: $color-white;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+.uber {
+  background: #06c167;
+}
+.line {
+  background: #06c755;
+}
+.map {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

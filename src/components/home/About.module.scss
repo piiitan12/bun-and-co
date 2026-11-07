@@ -1,0 +1,52 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.about {
+  background: $color-bg;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+  @include pc {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 64px;
+  }
+}
+.kicker {
+  @include heading-en;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: $color-accent;
+  margin-bottom: 20px;
+}
+.badge {
+  padding: 4px 10px;
+  font-size: 11px;
+  background: $color-accent;
+  color: $color-white;
+  border-radius: 4px;
+}
+.title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 20px;
+  @include pc {
+    font-size: 32px;
+  }
+}
+.body {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: $color-ink-sub;
+}
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

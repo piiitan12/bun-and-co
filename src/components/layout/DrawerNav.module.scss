@@ -7,14 +7,21 @@
   background: $color-bg-dark;
   color: $color-white;
   padding: 32px $gutter-sp;
-  transform: translateX(100%);
-  transition: transform 0.35s $ease-out;
+  // 右へずらすと横幅が広がる（scrollWidth が増える）ので、
+  // 閉じているときは「少し上に寄せて透明・非表示」にし、横方向には動かさない
+  opacity: 0;
+  transform: translateY(-12px);
+  visibility: hidden;
+  transition: opacity 0.3s $ease-out, transform 0.35s $ease-out, visibility 0s 0.35s;
   overflow-y: auto;
   @include pc {
     display: none;
   }
   &.isOpen {
-    transform: translateX(0);
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: opacity 0.3s $ease-out, transform 0.35s $ease-out, visibility 0s;
   }
 }
 .list {

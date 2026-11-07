@@ -1,13 +1,17 @@
-import store from "@/data/store.json";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import MenuPreview from "@/components/home/MenuPreview";
+import News from "@/components/home/News";
+import Access from "@/components/home/Access";
 
 export default function HomePage() {
   return (
-    <section className="section">
-      <div className="inner">
-        <h1>{store.name}</h1>
-        <p>{store.tagline}</p>
-        <p>（骨組み：トップページ。ステップ 2 で実装）</p>
-      </div>
-    </section>
+    <>
+      <Hero />
+      <About />
+      <MenuPreview />
+      <News />
+      <Access />
+    </>
   );
 }

@@ -1,0 +1,56 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: $color-white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba($color-ink, 0.06);
+}
+.clickable {
+  transition: transform 0.3s $ease-out, box-shadow 0.3s;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba($color-ink, 0.12);
+  }
+  &:hover .img {
+    transform: scale(1.04);
+  }
+}
+.imgWrap {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s $ease-out;
+}
+.body {
+  padding: 14px 16px 18px;
+}
+.name {
+  @include heading-en;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.price {
+  margin-top: 4px;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 15px;
+  color: $color-accent;
+}
+.desc {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: $color-ink-sub;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,19 @@
+@use "@/styles/variables" as *;
+
+.fade {
+  transition: opacity 0.7s $ease-out var(--fade-delay, 0ms), transform 0.7s $ease-out var(--fade-delay, 0ms);
+}
+// JS が動く環境（html.js）でだけ隠す。JS なし・検索エンジンには最初から見える
+:global(html.js) .fade:not(.isShow) {
+  opacity: 0;
+  transform: translateY(24px);
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+.isShow {
+  opacity: 1;
+  transform: none;
+}

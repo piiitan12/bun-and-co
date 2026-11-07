@@ -1,0 +1,144 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.hero {
+  position: relative;
+  height: calc(100svh - #{$header-h-sp});
+  min-height: 520px;
+  max-height: 900px;
+  overflow: hidden;
+  background: $color-bg-dark;
+  color: $color-white;
+  @include pc {
+    height: calc(100vh - #{$header-h-pc});
+  }
+}
+.slides {
+  position: absolute;
+  inset: 0;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    &:first-child {
+      opacity: 1;
+    }
+  }
+}
+.img {
+  object-fit: cover;
+}
+// 6 枚を 5 秒ずつ。表示 → 重なってフェードアウト
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.shadeL,
+.shadeR {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.shadeL {
+  background: linear-gradient(90deg, rgba($color-bg-dark, 0.75) 0%, rgba($color-bg-dark, 0.35) 45%, transparent 70%);
+}
+.shadeR {
+  background: linear-gradient(0deg, rgba($color-bg-dark, 0.6) 0%, transparent 40%);
+}
+.text {
+  position: absolute;
+  left: $gutter-sp;
+  right: $gutter-sp;
+  bottom: 22%;
+  @include pc {
+    left: max($gutter-pc, calc((100% - #{$inner-max}) / 2 + #{$gutter-pc}));
+    bottom: 26%;
+  }
+}
+.kicker {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: $color-kraft;
+  margin-bottom: 12px;
+}
+.title {
+  @include heading-en;
+  font-size: clamp(48px, 11vw, 112px);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  animation: rise 0.9s $ease-out both;
+}
+.lead {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 2;
+  animation: rise 0.9s $ease-out 0.25s both;
+  @include pc {
+    font-size: 17px;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.scroll {
+  position: absolute;
+  left: $gutter-sp;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: $color-kraft;
+  @include pc {
+    left: max($gutter-pc, calc((100% - #{$inner-max}) / 2 + #{$gutter-pc}));
+  }
+}
+.scrollLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: $color-kraft;
+  transform-origin: left;
+  animation: line 1.6s ease-in-out infinite;
+}
+@keyframes line {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}

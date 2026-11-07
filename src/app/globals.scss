@@ -12,6 +12,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip; // 画面外へ translate した要素で横幅が広がらないように
 }
 body {
   font-family: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
@@ -61,6 +62,9 @@ textarea {
   @include pc {
     padding-block: 112px;
   }
+}
+.grid-safe > * {
+  min-width: 0;
 }
 .sr-only {
   position: absolute;

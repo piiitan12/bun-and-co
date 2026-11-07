@@ -1,0 +1,32 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.menu {
+  background: $color-white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  @include pc {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+.more {
+  margin-top: 40px;
+  text-align: center;
+}
+.moreLink {
+  @include heading-en;
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 13px;
+  background: $color-ink;
+  color: $color-white;
+  border-radius: 999px;
+  transition: background 0.2s;
+  &:hover {
+    background: $color-accent;
+  }
+}
