@@ -2,45 +2,51 @@
 @use "@/styles/mixins" as *;
 
 .access {
-  background: $color-white;
+  background: $color-bg;
 }
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 40px;
+  gap: $sp-7;
   @include pc {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-    gap: 64px;
+    gap: $sp-8;
     align-items: start;
   }
 }
 .external {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
+  gap: $sp-3;
+  margin-top: $sp-6;
 }
-.uber,
-.line {
-  @include heading-en;
-  display: inline-block;
-  padding: 12px 20px;
-  font-size: 12px;
-  border-radius: 6px;
-  color: $color-white;
-  transition: opacity 0.2s;
+// 黒地に金の文字＋アイコン。ホバーで文字が白に、配達アイコンは緑の光（ヘッダーと同じ動き）
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  min-height: 48px;
+  padding: 0 $sp-5;
+  font-size: $fs-sm;
+  font-weight: 700;
+  color: $color-gold;
+  background: $color-bg-dark;
+  border-radius: $radius-sm;
+  transition: color 0.3s;
   &:hover {
-    opacity: 0.85;
+    color: $color-white;
   }
 }
-.uber {
-  background: #06c167;
-}
-.line {
-  background: #06c755;
+.ctaImg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  .delivery:hover & {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(0, 255, 0, 0.5));
+  }
 }
 .map {
   width: 100%;
   height: auto;
-  border-radius: 8px;
 }

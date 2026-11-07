@@ -25,10 +25,10 @@
 .badge {
   display: grid;
   justify-items: center;
-  gap: 4px;
-  padding: 12px 8px 8px;
+  gap: $sp-1;
+  padding: $sp-3 $sp-2 $sp-2;
   background: $color-bg-dark;
-  border-radius: 2px;
+  border-radius: $radius-sm;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 .mark {
@@ -38,7 +38,7 @@
 // 白い文字に金の光（元テーマの hover-text-top）
 .label {
   font-family: var(--font-oswald), sans-serif;
-  font-size: 12px;
+  font-size: $fs-xs;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: $color-white;

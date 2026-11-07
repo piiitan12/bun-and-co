@@ -2,15 +2,15 @@
 @use "@/styles/mixins" as *;
 
 .section {
-  scroll-margin-top: $header-h-sp + 16px;
+  scroll-margin-top: $header-h-sp + $sp-4;
   & + & {
-    margin-top: 64px;
+    margin-top: $sp-8;
     @include pc {
-      margin-top: 96px;
+      margin-top: $sp-9;
     }
   }
   @include pc {
-    scroll-margin-top: $header-h-pc + 24px;
+    scroll-margin-top: $header-h-pc + $sp-5;
   }
 }
 .title {
@@ -19,10 +19,10 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: $sp-4;
   @include tablet {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: $sp-5;
   }
   > li > div {
     height: 100%;

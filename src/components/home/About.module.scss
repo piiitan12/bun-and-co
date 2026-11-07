@@ -7,25 +7,25 @@
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 48px;
+  gap: $sp-7;
   @include pc {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 64px;
+    gap: $sp-8;
   }
 }
 .lead {
-  font-size: 24px;
+  font-size: $fs-xl;
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: $sp-5;
   @include pc {
-    font-size: 32px;
+    font-size: $fs-2xl;
   }
 }
 .body {
   display: grid;
-  gap: 12px;
+  gap: $sp-3;
   color: $color-ink-sub;
 }
 .img {

@@ -6,7 +6,7 @@
   inset: $header-h-sp 0 0 0;
   background: $color-bg-dark;
   color: $color-white;
-  padding: 32px $gutter-sp;
+  padding: $sp-6 $gutter-sp;
   // 右へずらすと横幅が広がる（scrollWidth が増える）ので、
   // 閉じているときは「少し上に寄せて透明・非表示」にし、横方向には動かさない
   opacity: 0;
@@ -26,13 +26,13 @@
 }
 .list {
   display: grid;
-  gap: 4px;
+  gap: $sp-1;
 }
 .link {
   @include heading-en;
   display: block;
-  padding: 16px 8px;
-  font-size: 24px;
+  padding: $sp-4 $sp-2;
+  font-size: $fs-xl;
   border-bottom: 1px solid rgba($color-white, 0.12);
 }
 .external {

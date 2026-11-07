@@ -3,16 +3,14 @@
 
 .wrap {
   background: $color-white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 12px rgba($color-ink, 0.06);
+  padding: $sp-5;
   @include pc {
-    padding: 28px 32px;
+    padding: $sp-6 $sp-6;
   }
 }
 .note {
-  margin-bottom: 12px;
-  font-size: 13px;
+  margin-bottom: $sp-3;
+  font-size: $fs-sm;
   color: $color-accent;
 }
 .table {
@@ -22,8 +20,8 @@
 .row {
   display: flex;
   align-items: baseline;
-  gap: 12px;
-  padding: 10px 0;
+  gap: $sp-3;
+  padding: $sp-3 0;
   border-bottom: 1px dashed $color-line;
   &:last-child {
     border-bottom: 0;
@@ -39,12 +37,12 @@
 }
 .name {
   order: 1;
-  font-size: 14px;
+  font-size: $fs-sm;
 }
 .price {
   order: 3;
   font-family: var(--font-oswald), sans-serif;
-  font-size: 15px;
+  font-size: $fs-base;
   color: $color-accent;
   white-space: nowrap;
 }

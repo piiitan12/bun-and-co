@@ -16,7 +16,7 @@ html {
 }
 body {
   font-family: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
-  font-size: 15px;
+  font-size: $fs-base;
   line-height: 1.8;
   color: $color-ink;
   background: $color-bg;
@@ -58,9 +58,9 @@ textarea {
   @include inner;
 }
 .section {
-  padding-block: 64px;
+  padding-block: $sp-8;
   @include pc {
-    padding-block: 112px;
+    padding-block: $sp-10;
   }
 }
 .grid-safe > * {

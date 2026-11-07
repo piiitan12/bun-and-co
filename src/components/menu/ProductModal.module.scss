@@ -5,7 +5,6 @@
   width: min(92vw, 520px);
   padding: 0;
   border: 0;
-  border-radius: 8px;
   background: $color-white;
   color: $color-ink;
   &::backdrop {
@@ -25,7 +24,7 @@
   border-radius: 50%;
   background: rgba($color-ink, 0.7);
   color: $color-white;
-  font-size: 22px;
+  font-size: $fs-xl;
   line-height: 1;
   &:hover {
     background: $color-ink;
@@ -34,28 +33,27 @@
 .imgWrap img {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
 }
 .details {
-  padding: 20px 24px 28px;
+  padding: $sp-5 $sp-5 $sp-6;
 }
 .name {
   @include heading-en;
-  font-size: 22px;
+  font-size: $fs-xl;
 }
 .price {
-  margin-top: 6px;
+  margin-top: $sp-2;
   font-family: var(--font-oswald), sans-serif;
-  font-size: 18px;
+  font-size: $fs-md;
   color: $color-accent;
 }
 .desc {
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: $sp-3;
+  font-size: $fs-sm;
   color: $color-ink-sub;
 }
 .options {
-  margin-top: 6px;
-  font-size: 13px;
+  margin-top: $sp-2;
+  font-size: $fs-sm;
   color: $color-ink-sub;
 }

@@ -20,10 +20,10 @@
 .badge {
   display: grid;
   justify-items: center;
-  gap: 4px;
-  padding: 8px 8px;
+  gap: $sp-1;
+  padding: $sp-2 $sp-2;
   background: rgba($color-bg-dark, 0.85);
-  border-radius: 2px;
+  border-radius: $radius-sm;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 .mark {
@@ -32,7 +32,7 @@
 }
 .label {
   font-family: var(--font-oswald), sans-serif;
-  font-size: 12px;
+  font-size: $fs-xs;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: $color-white;

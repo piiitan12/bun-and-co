@@ -45,12 +45,12 @@
   @include heading-en;
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 24px;
-  margin-bottom: 24px;
+  gap: $sp-4;
+  font-size: $fs-xl;
+  margin-bottom: $sp-5;
   @include pc {
-    font-size: 32px;
-    margin-bottom: 32px;
+    font-size: $fs-2xl;
+    margin-bottom: $sp-6;
   }
   &::after {
     content: "";
@@ -67,12 +67,12 @@
   z-index: 0;
   display: inline-block;
   min-width: 160px;
-  padding: 12px 32px;
-  font-size: 13px;
+  padding: $sp-3 $sp-6;
+  font-size: $fs-sm;
   letter-spacing: 0.1em;
   background: $color-gold-deep;
   color: $color-white;
-  border-radius: 2px;
+  border-radius: $radius-sm;
   overflow: hidden;
   transition: background 0.3s;
   &::before {

@@ -32,16 +32,16 @@
 .list {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: $sp-6;
 }
 // 文字は金。ホバーで白に変わり、下線がのびる
 .link {
   @include heading-en;
   position: relative;
-  font-size: 17px;
+  font-size: $fs-md;
   letter-spacing: 0.1em;
   color: $color-gold;
-  padding-block: 8px;
+  padding-block: $sp-2;
   transition: color 0.3s;
   &::after {
     content: "";
@@ -86,10 +86,10 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-top: 8px;
+  margin-top: $sp-2;
   white-space: nowrap;
   font-family: var(--font-oswald), sans-serif;
-  font-size: 13px;
+  font-size: $fs-sm;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: $color-white;
@@ -111,10 +111,10 @@
 }
 .hamburger {
   display: grid;
-  gap: 4px;
+  gap: $sp-1;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  padding: $sp-3;
   align-content: center;
   @include pc {
     display: none;

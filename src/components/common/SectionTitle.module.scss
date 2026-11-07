@@ -2,20 +2,20 @@
 @use "@/styles/mixins" as *;
 
 .wrap {
-  margin-bottom: 32px;
+  margin-bottom: $sp-6;
   @include pc {
-    margin-bottom: 48px;
+    margin-bottom: $sp-7;
   }
 }
 .en {
   @include heading-en;
   position: relative;
   display: inline-block;
-  font-size: 32px;
+  font-size: $fs-2xl;
   line-height: 1.1;
-  padding-bottom: 12px;
+  padding-bottom: $sp-3;
   @include pc {
-    font-size: 44px;
+    font-size: $fs-3xl;
   }
   &::after {
     content: "";
@@ -37,8 +37,8 @@
   }
 }
 .ja {
-  margin-top: 12px;
-  font-size: 13px;
+  margin-top: $sp-3;
+  font-size: $fs-sm;
   color: $color-ink-sub;
 }
 .center {

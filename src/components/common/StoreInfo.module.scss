@@ -3,19 +3,19 @@
 
 .info {
   display: grid;
-  gap: 12px;
-  font-size: 13px;
+  gap: $sp-3;
+  font-size: $fs-sm;
 }
 .row {
   display: grid;
   grid-template-columns: 6.5em 1fr;
-  gap: 12px;
+  gap: $sp-3;
   dt {
     @include heading-en;
-    font-size: 12px;
+    font-size: $fs-xs;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: $sp-2;
     padding-top: 2px;
     color: $color-accent;
   }
@@ -28,18 +28,18 @@
 .hours {
   display: grid;
   & + & {
-    margin-top: 8px;
+    margin-top: $sp-2;
   }
   @include tablet {
     grid-template-columns: 6em 1fr;
-    gap: 12px;
+    gap: $sp-3;
     & + & {
       margin-top: 0;
     }
   }
 }
 .hoursLabel {
-  font-size: 12px;
+  font-size: $fs-xs;
   color: $color-ink-sub;
   @include tablet {
     font-size: inherit;

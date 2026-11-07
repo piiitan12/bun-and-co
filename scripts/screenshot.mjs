@@ -1,7 +1,7 @@
-// スクリーンショットを撮る（SP 375px＝モバイル端末エミュレーション／PC 1280px）。
+// スクリーンショットを撮る（SP 375px＝モバイル端末エミュレーション／PC 1440px）。
 // Chrome を DevTools プロトコルで操作する。追加パッケージ不要（Node 22 以上の標準 WebSocket を使う）。
 // 使い方: npm run build && node scripts/screenshot.mjs [パス=/] [名前=top]
-//   → docs/screenshots/<名前>_375.png と <名前>_1280.png
+//   → docs/screenshots/<名前>_375.png と <名前>_1440.png
 import { spawn, execSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { setTimeout as sleep } from "node:timers/promises";
@@ -17,7 +17,7 @@ mkdirSync(outDir, { recursive: true });
 const server = spawn("npx", ["next", "start", "-p", String(PORT)], { stdio: "ignore" });
 const chrome = spawn(
   CHROME,
-  [`--headless=new`, `--remote-debugging-port=${DEBUG_PORT}`, "--hide-scrollbars", "--window-size=1280,900", "about:blank"],
+  [`--headless=new`, `--remote-debugging-port=${DEBUG_PORT}`, "--hide-scrollbars", "--window-size=1440,900", "about:blank"],
   { stdio: "ignore" },
 );
 
@@ -98,7 +98,7 @@ try {
   const { send, ws } = await connect(await cdp());
   await send("Page.enable");
   await shot(send, 375, true, `${outDir}${name}_375.png`);
-  await shot(send, 1280, false, `${outDir}${name}_1280.png`);
+  await shot(send, 1440, false, `${outDir}${name}_1440.png`);
   ws.close();
 } finally {
   chrome.kill();
