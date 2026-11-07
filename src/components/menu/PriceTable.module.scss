@@ -1,0 +1,50 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.wrap {
+  background: $color-white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba($color-ink, 0.06);
+  @include pc {
+    padding: 28px 32px;
+  }
+}
+.note {
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: $color-accent;
+}
+.table {
+  display: grid;
+  gap: 0;
+}
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed $color-line;
+  &:last-child {
+    border-bottom: 0;
+  }
+  // 名前と価格の間を点線でつなぐ
+  &::after {
+    content: "";
+    order: 2;
+    flex: 1;
+    border-bottom: 1px dotted $color-line;
+    transform: translateY(-4px);
+  }
+}
+.name {
+  order: 1;
+  font-size: 14px;
+}
+.price {
+  order: 3;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 15px;
+  color: $color-accent;
+  white-space: nowrap;
+}

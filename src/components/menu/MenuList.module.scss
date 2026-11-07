@@ -1,0 +1,27 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.jump {
+  margin-bottom: 40px;
+  @include pc {
+    margin-bottom: 56px;
+  }
+}
+.jumpList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.jumpLink {
+  @include heading-en;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 12px;
+  border: 1px solid $color-ink;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+  &:hover {
+    background: $color-ink;
+    color: $color-white;
+  }
+}

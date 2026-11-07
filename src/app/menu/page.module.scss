@@ -1,0 +1,19 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.intro {
+  background: $color-white;
+  padding-bottom: 40px;
+  @include pc {
+    padding-bottom: 64px;
+  }
+}
+.about {
+  display: grid;
+  gap: 10px;
+  max-width: 40em;
+  color: $color-ink-sub;
+}
+.list {
+  background: $color-bg;
+}
