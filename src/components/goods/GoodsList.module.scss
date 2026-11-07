@@ -1,0 +1,18 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.title {
+  @include heading-rule;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  @include tablet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+  > li > div {
+    height: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.intro {
+  background: $color-white;
+  padding-bottom: 48px;
+  @include pc {
+    padding-bottom: 64px;
+  }
+}
+.lead {
+  display: grid;
+  gap: 12px;
+  max-width: 40em;
+  color: $color-ink-sub;
+}
+.note {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.list {
+  background: $color-bg;
+}

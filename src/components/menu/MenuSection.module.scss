@@ -4,9 +4,9 @@
 .section {
   scroll-margin-top: $header-h-sp + 16px;
   & + & {
-    margin-top: 56px;
+    margin-top: 64px;
     @include pc {
-      margin-top: 80px;
+      margin-top: 96px;
     }
   }
   @include pc {
@@ -14,22 +14,7 @@
   }
 }
 .title {
-  @include heading-en;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 24px;
-  margin-bottom: 20px;
-  @include pc {
-    font-size: 30px;
-    margin-bottom: 28px;
-  }
-  &::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: $color-line;
-  }
+  @include heading-rule;
 }
 .grid {
   display: grid;
@@ -38,5 +23,8 @@
   @include tablet {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+  }
+  > li > div {
+    height: 100%;
   }
 }

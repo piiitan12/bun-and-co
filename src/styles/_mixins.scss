@@ -39,3 +39,23 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+// 一覧の見出し（英字＋右へのびる罫線）。MENU のカテゴリ見出しと GOODS の LINEUP で共用
+@mixin heading-rule {
+  @include heading-en;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+  margin-bottom: 24px;
+  @include pc {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: $color-line;
+  }
+}
