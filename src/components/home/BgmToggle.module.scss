@@ -1,54 +1,60 @@
 @use "@/styles/variables" as *;
 @use "@/styles/mixins" as *;
 
-.wrap {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 6px;
-}
 .btn {
-  @include heading-en;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  font-size: 13px;
-  border: 1px solid $color-ink;
-  border-radius: 999px;
-  transition: background 0.2s, color 0.2s;
-  &:hover,
-  &.isPlaying {
-    background: $color-ink;
-    color: $color-white;
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 40;
+  width: 76px;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @include pc {
+    left: 20px;
+    bottom: 20px;
+    width: 92px;
   }
 }
-.bars {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 14px;
-  span {
-    width: 3px;
-    height: 6px;
-    background: currentColor;
-    border-radius: 1px;
-  }
+.badge {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px 8px;
+  background: rgba($color-bg-dark, 0.85);
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
-.isPlaying .bars span {
-  animation: bounce 0.8s ease-in-out infinite;
-  &:nth-child(2) {
-    animation-delay: 0.15s;
-  }
-  &:nth-child(3) {
-    animation-delay: 0.3s;
-  }
+.mark {
+  width: 100%;
+  height: auto;
 }
-@keyframes bounce {
+.label {
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: $color-white;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 215, 0, 0.6);
+}
+// 再生中は鼓動のように拡大・縮小（元テーマの pulse 1.2 秒）
+.isPlaying .badge {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
   0%,
   100% {
-    height: 5px;
+    transform: scale(1);
   }
   50% {
-    height: 14px;
+    transform: scale(1.1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .isPlaying .badge {
+    animation: none;
   }
 }

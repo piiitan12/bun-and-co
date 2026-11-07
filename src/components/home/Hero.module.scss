@@ -52,50 +52,50 @@
     opacity: 0;
   }
 }
-.shadeL,
-.shadeR {
+.shade,
+.wedge {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
-.shadeL {
-  background: linear-gradient(90deg, rgba($color-bg-dark, 0.75) 0%, rgba($color-bg-dark, 0.35) 45%, transparent 70%);
+// 全体に薄い影＋下を少し濃く（SCROLL の文字のため）
+.shade {
+  background: linear-gradient(0deg, rgba($color-bg-dark, 0.55) 0%, rgba($color-bg-dark, 0.2) 45%, rgba($color-bg-dark, 0.2) 100%);
 }
-.shadeR {
-  background: linear-gradient(0deg, rgba($color-bg-dark, 0.6) 0%, transparent 40%);
+// 左の斜めの影（元テーマの mv__background-l）。clip-path で斜めに切る
+.wedge {
+  background: rgba(0, 0, 0, 0.38);
+  clip-path: polygon(0 0, 49% 0, 43.5% 100%, 0 100%);
+  @media (max-width: #{$bp-tablet - 1px}) {
+    clip-path: polygon(0 0, 78% 0, 64% 100%, 0 100%);
+  }
 }
 .text {
   position: absolute;
   left: $gutter-sp;
   right: $gutter-sp;
-  bottom: 22%;
+  bottom: 26%;
   @include pc {
     left: max($gutter-pc, calc((100% - #{$inner-max}) / 2 + #{$gutter-pc}));
-    bottom: 26%;
+    bottom: 30%;
   }
 }
-.kicker {
-  font-family: var(--font-space-grotesk), sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  color: $color-kraft;
-  margin-bottom: 12px;
+.date {
+  @include heading-en;
+  font-size: clamp(40px, 7vw, 74px);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  animation: rise 0.9s $ease-out both;
 }
 .title {
   @include heading-en;
-  font-size: clamp(48px, 11vw, 112px);
-  line-height: 0.95;
+  font-size: clamp(52px, 10vw, 104px);
+  line-height: 1.1;
   letter-spacing: 0.04em;
-  animation: rise 0.9s $ease-out both;
-}
-.lead {
-  margin-top: 20px;
-  font-size: 15px;
-  line-height: 2;
-  animation: rise 0.9s $ease-out 0.25s both;
-  @include pc {
-    font-size: 17px;
-  }
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  animation: rise 0.9s $ease-out 0.2s both;
 }
 @keyframes rise {
   from {
@@ -113,11 +113,11 @@
   bottom: 24px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-space-grotesk), sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.3em;
-  color: $color-kraft;
+  color: $color-gold;
   @include pc {
     left: max($gutter-pc, calc((100% - #{$inner-max}) / 2 + #{$gutter-pc}));
   }
@@ -126,7 +126,7 @@
   display: block;
   width: 40px;
   height: 1px;
-  background: $color-kraft;
+  background: $color-gold;
   transform-origin: left;
   animation: line 1.6s ease-in-out infinite;
 }

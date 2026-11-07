@@ -4,34 +4,53 @@
 .info {
   display: grid;
   gap: 12px;
-  font-size: 14px;
+  font-size: 13px;
 }
 .row {
   display: grid;
-  grid-template-columns: 5em 1fr;
+  grid-template-columns: 6.5em 1fr;
   gap: 12px;
   dt {
     @include heading-en;
     font-size: 12px;
-    padding-top: 3px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 2px;
     color: $color-accent;
   }
 }
+.icon {
+  flex-shrink: 0;
+  margin-top: -1px;
+}
+// 曜日と時間。SP は曜日の下に時間、タブレット以上は横に並べる（幅が足りないと時間だけ次の行に落ちて間延びしていた）
 .hours {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  & + & {
+    margin-top: 8px;
+  }
+  @include tablet {
+    grid-template-columns: 6em 1fr;
+    gap: 12px;
+    & + & {
+      margin-top: 0;
+    }
+  }
 }
 .hoursLabel {
-  min-width: 5.5em;
+  font-size: 12px;
   color: $color-ink-sub;
+  @include tablet {
+    font-size: inherit;
+  }
 }
 .light {
   color: $color-white;
   .hoursLabel {
-    color: $color-kraft;
+    color: $color-gold;
   }
   dt {
-    color: $color-kraft;
+    color: $color-gold;
   }
 }

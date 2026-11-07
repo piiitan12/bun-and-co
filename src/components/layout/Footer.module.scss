@@ -4,14 +4,14 @@
 .footer {
   background: $color-bg-dark;
   color: $color-white;
-  padding-top: 56px;
+  padding-top: 64px;
   @include pc {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 }
 .inner {
   display: grid;
-  gap: 40px;
+  gap: 48px;
   @include pc {
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.6fr) minmax(0, 1fr);
     gap: 48px;
@@ -20,40 +20,63 @@
 .tagline {
   margin-top: 16px;
   font-size: 13px;
-  color: $color-kraft;
+  color: $color-gold;
 }
 .navList {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 48px;
+  @include pc {
+    grid-template-columns: 1fr;
+  }
+  gap: 12px;
   a {
     @include heading-en;
     font-size: 13px;
+    color: $color-gold;
+    transition: color 0.3s;
     &:hover {
-      color: $color-kraft;
+      color: $color-white;
     }
   }
 }
 .social {
   display: flex;
   gap: 16px;
-  margin-top: 24px;
-  flex-wrap: wrap;
+  margin-top: 32px;
+  flex-direction: column;
+  gap: 12px;
 }
+// アイコン＋文字。ホバーで金から白へゆっくり変わる（元テーマの footer-social、0.8 秒）
 .socialLink {
-  font-size: 12px;
-  padding: 6px 12px;
-  border: 1px solid rgba($color-white, 0.3);
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: $color-gold;
+  transition: color 0.8s;
   &:hover {
-    border-color: $color-kraft;
-    color: $color-kraft;
+    color: $color-white;
+  }
+}
+.socialImg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  .socialLink:hover & {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(0, 255, 0, 0.5));
   }
 }
 .copy {
   margin-top: 48px;
-  padding: 20px;
+  padding: 24px;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   color: rgba($color-white, 0.6);
   border-top: 1px solid rgba($color-white, 0.1);
+  // SP は左下の BGM・右下の PAGE TOP（固定）が最後に重ならないよう、その高さぶん下を空ける
+  @media (max-width: #{$bp-pc - 1px}) {
+    padding-bottom: 24px + 120px;
+  }
 }

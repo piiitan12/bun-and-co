@@ -2,7 +2,7 @@
 @use "@/styles/mixins" as *;
 
 .menu {
-  background: $color-white;
+  background: $color-bg;
 }
 .grid {
   display: grid;
@@ -12,21 +12,14 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
   }
+  > li > div {
+    height: 100%;
+  }
 }
 .more {
-  margin-top: 40px;
+  margin-top: 48px;
   text-align: center;
 }
 .moreLink {
-  @include heading-en;
-  display: inline-block;
-  padding: 14px 36px;
-  font-size: 13px;
-  background: $color-ink;
-  color: $color-white;
-  border-radius: 999px;
-  transition: background 0.2s;
-  &:hover {
-    background: $color-accent;
-  }
+  @include button-gold;
 }

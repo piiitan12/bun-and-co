@@ -1,11 +1,13 @@
-// 色（架空の店 BUN & CO. 用。元テーマの配色を踏襲した「黒×クラフト紙×赤」の 3 色）
+// 色（架空の店 BUN & CO. 用。元テーマの配色「黒×金」を踏襲。本文の地は読みやすさのため白〜生成り）
 $color-bg: #faf7f2;
-$color-bg-dark: #141414;
+$color-bg-dark: #111111;
 $color-ink: #1c1c1c;
 $color-ink-sub: #5c5852;
-$color-accent: #c8402c;
-$color-accent-dark: #a2321f;
-$color-kraft: #c9b79c;
+// 金は 3 段。黒地の文字・アイコン＝gold、元テーマの見出し下線・ボタン＝gold-deep、白地の文字＝accent（白地で読める濃さ）
+$color-gold: #dfa910;
+$color-gold-deep: #9f7916;
+$color-accent: #8a6e14;
+$color-accent-dark: #6f5810;
 $color-line: #e4ddd1;
 $color-white: #ffffff;
 
@@ -13,8 +15,8 @@ $color-white: #ffffff;
 $inner-max: 1100px;
 $gutter-sp: 20px;
 $gutter-pc: 40px;
-$header-h-sp: 64px;
-$header-h-pc: 80px;
+$header-h-sp: 72px;
+$header-h-pc: 104px;
 
 // ブレークポイント（元の responsive.css は SP / PC の 2 段構え。768px を境にする）
 $bp-tablet: 768px;

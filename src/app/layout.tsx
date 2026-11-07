@@ -44,8 +44,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  // suppressHydrationWarning：body の script が表示前に html へ js クラスを足すため、React の照合で差分と見なさない
   return (
-    <html lang="ja" className={`${notoSansJp.variable} ${oswald.variable} ${spaceGrotesk.variable}`}>
+    <html lang="ja" className={`${notoSansJp.variable} ${oswald.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body>
         {/* JS が動く環境の印。スクロール出現（FadeIn）はこの印があるときだけ要素を隠す */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />

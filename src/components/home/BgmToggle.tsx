@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import styles from "./BgmToggle.module.scss";
 
-/** BGM の再生／停止。元テーマの <audio loop> ＋ jQuery の切替を useState で再実装。
- *  音源は元サイトと同じもの（使用可の確認済み）。差し替えは src だけ */
+/** BGM の再生／停止。トップページだけ、左下に固定で置く（元テーマの #bgm-controller）。
+ *  再生中は鼓動のように拡大・縮小をくり返す（元の @keyframes pulse）。音源の差し替えは src だけ */
 export default function BgmToggle({ src = "/audio/bgm.mp3" }: { src?: string }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -20,21 +21,22 @@ export default function BgmToggle({ src = "/audio/bgm.mp3" }: { src?: string }) 
   }, [playing]);
 
   return (
-    <div className={styles.wrap}>
+    <>
       <audio ref={audioRef} src={src} loop preload="none" />
       <button
         type="button"
         className={`${styles.btn} ${playing ? styles.isPlaying : ""}`}
         aria-pressed={playing}
+        aria-label={playing ? "BGM を止める" : "BGM を再生する"}
         onClick={() => setPlaying((v) => !v)}
       >
-        <span className={styles.bars} aria-hidden="true">
-          <span />
-          <span />
-          <span />
+        <span className={styles.badge}>
+          <Image src="/images/logo/music-mark.png" alt="" width={400} height={257} className={styles.mark} />
+          <span className={styles.label} aria-hidden="true">
+            {playing ? "MUSIC OFF" : "MUSIC ON"}
+          </span>
         </span>
-        {playing ? "MUSIC OFF" : "MUSIC ON"}
       </button>
-    </div>
+    </>
   );
 }

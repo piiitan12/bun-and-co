@@ -2,11 +2,13 @@ import Image from "next/image";
 import hero from "@/data/hero.json";
 import store from "@/data/store.json";
 import type { HeroImage } from "@/types/data";
+import BgmToggle from "./BgmToggle";
 import styles from "./Hero.module.scss";
 
 const images = hero.images as HeroImage[];
 
-/** 6 枚の写真が順にフェードするメインビジュアル。動きは CSS アニメーションだけ（JS なし） */
+/** 6 枚の写真が順にフェードするメインビジュアル。動きは CSS アニメーションだけ（JS なし）。
+ *  文字は元テーマと同じ「開店年月＋GRAND OPEN!」。左に斜めの影をかけて文字を読みやすくする */
 export default function Hero() {
   return (
     <section className={styles.hero} aria-label="メインビジュアル">
@@ -21,24 +23,18 @@ export default function Hero() {
           </li>
         ))}
       </ul>
-      <div className={styles.shadeL} aria-hidden="true" />
-      <div className={styles.shadeR} aria-hidden="true" />
+      <div className={styles.shade} aria-hidden="true" />
+      <div className={styles.wedge} aria-hidden="true" />
       <div className={styles.text}>
-        <p className={styles.kicker}>CRAFT BURGER &amp; CAFE</p>
-        <h1 className={styles.title}>{store.name}</h1>
-        <p className={styles.lead}>
-          {store.lead.split("\n").map((line) => (
-            <span key={line}>
-              {line}
-              <br />
-            </span>
-          ))}
-        </p>
+        <h1 className="sr-only">{store.name}</h1>
+        <p className={styles.date}>{store.openedLabel}</p>
+        <p className={styles.title}>GRAND OPEN!</p>
       </div>
       <a href="#about" className={styles.scroll} aria-label="下へスクロール">
         <span className={styles.scrollLine} aria-hidden="true" />
         SCROLL
       </a>
+      <BgmToggle />
     </section>
   );
 }

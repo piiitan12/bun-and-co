@@ -2,31 +2,72 @@
 @use "@/styles/mixins" as *;
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  @include heading-en;
   line-height: 1;
 }
-.mark {
+
+// ヘッダー：マーク（上）＋小さな店名（下）。スクロールで店名の文字だけに切り替える（元テーマの logo-img ⇄ logo-text）
+.header {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+.markBlock {
   display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: $color-accent;
-  color: $color-white;
-  font-family: var(--font-oswald), sans-serif;
-  font-size: 22px;
-  font-weight: 600;
+  justify-items: center;
+  gap: 2px;
+  transition: opacity 0.9s ease-in-out;
 }
-.text {
-  @include heading-en;
+.mark {
+  width: auto;
+  height: 40px;
+  @include pc {
+    height: 54px;
+  }
+}
+.markName {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: $color-gold;
+  @include pc {
+    font-size: 12px;
+  }
+}
+.word {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
   font-size: 20px;
-  letter-spacing: 0.12em;
-}
-.dark .text {
-  color: $color-ink;
-}
-.light .text {
+  letter-spacing: 0.1em;
   color: $color-white;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(246, 246, 246, 0.5));
+  transition: opacity 0.8s ease-in-out;
+  @include pc {
+    font-size: 24px;
+  }
+}
+.isSwapped {
+  .markBlock {
+    opacity: 0;
+  }
+  .word {
+    opacity: 0.85;
+  }
+}
+
+// フッター：店名の文字だけ（元テーマの footer-logo-text）
+.footer {
+  display: inline-block;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: $color-gold;
+  transition: color 0.8s;
+  &:hover {
+    color: $color-white;
+  }
 }
