@@ -1,0 +1,34 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.privacy {
+  background: $color-bg;
+}
+// 1 行が長くなりすぎないよう 40 字前後で折り返す
+.body {
+  max-width: 40em;
+  padding: $sp-5;
+  background: $color-white;
+  @include pc {
+    padding: $sp-7;
+  }
+}
+.intro {
+  color: $color-ink-sub;
+}
+.item {
+  margin-top: $sp-6;
+  padding-top: $sp-5;
+  border-top: 1px solid $color-line;
+}
+.heading {
+  margin-bottom: $sp-2;
+  font-size: $fs-md;
+  font-weight: 700;
+}
+.updated {
+  margin-top: $sp-7;
+  font-size: $fs-sm;
+  color: $color-ink-sub;
+  text-align: right;
+}

@@ -1,0 +1,42 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.contact {
+  background: $color-bg;
+}
+.grid {
+  display: grid;
+  gap: $sp-7;
+  @include pc {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: $sp-9;
+    align-items: start;
+  }
+}
+.lead {
+  max-width: 24em;
+  color: $color-ink-sub;
+}
+// 電話の窓口。黒い札にして、フォームより先に目に入る位置へ
+.tel {
+  margin-top: $sp-6;
+  padding: $sp-5;
+  color: $color-white;
+  background: $color-bg-dark;
+  dt {
+    font-size: $fs-xs;
+    color: $color-gold;
+  }
+}
+.telNum {
+  @include heading-en;
+  display: inline-block;
+  margin-top: $sp-1;
+  font-size: $fs-xl;
+  letter-spacing: 0.08em;
+}
+.telNote {
+  margin-top: $sp-1;
+  font-size: $fs-xs;
+  color: rgba($color-white, 0.7);
+}

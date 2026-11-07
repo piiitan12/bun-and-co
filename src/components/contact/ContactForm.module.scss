@@ -1,0 +1,104 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.form {
+  display: grid;
+  gap: $sp-5;
+}
+.field {
+  display: grid;
+  gap: $sp-2;
+}
+.label {
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  font-size: $fs-sm;
+  font-weight: 700;
+}
+.req,
+.opt {
+  padding: 0 $sp-2;
+  font-size: $fs-xs;
+  font-weight: 500;
+  border-radius: $radius-sm;
+}
+.req {
+  color: $color-white;
+  background: $color-accent;
+}
+.opt {
+  color: $color-ink-sub;
+  border: 1px solid $color-line;
+}
+.input {
+  width: 100%;
+  padding: $sp-3 $sp-4;
+  font: inherit;
+  font-size: 16px; // iOS で入力時に拡大されないよう 16px 以上
+  color: $color-ink;
+  background: $color-white;
+  border: 1px solid $color-line;
+  border-radius: 0;
+  transition: border-color 0.2s;
+  &:focus {
+    outline: none;
+    border-color: $color-gold-deep;
+    box-shadow: 0 0 0 2px rgba($color-gold, 0.3);
+  }
+  &[aria-invalid="true"] {
+    border-color: $color-error;
+  }
+}
+textarea.input {
+  resize: vertical;
+  min-height: 160px;
+}
+.error {
+  font-size: $fs-xs;
+  color: $color-error;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  font-size: $fs-sm;
+  input {
+    width: 20px;
+    height: 20px;
+    accent-color: $color-gold-deep;
+  }
+}
+.link {
+  color: $color-accent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.submit {
+  @include button-gold;
+  justify-self: start;
+  min-height: 52px;
+  padding: 0 $sp-7;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  @media (max-width: #{$bp-tablet - 1px}) {
+    justify-self: stretch;
+  }
+}
+.done {
+  display: grid;
+  gap: $sp-3;
+  padding: $sp-6;
+  background: $color-white;
+  border-top: 4px solid $color-gold-deep;
+}
+.doneTitle {
+  @include heading-en;
+  font-size: $fs-xl;
+}
+.doneNote {
+  font-size: $fs-xs;
+  color: $color-ink-sub;
+}
