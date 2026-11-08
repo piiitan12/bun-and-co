@@ -2,9 +2,9 @@
 @use "@/styles/mixins" as *;
 
 .wrap {
-  margin-bottom: $sp-6;
+  margin-bottom: $sp-7;
   @include pc {
-    margin-bottom: $sp-7;
+    margin-bottom: $sp-8;
   }
 }
 .en {

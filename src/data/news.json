@@ -1,11 +1,41 @@
 {
-  "note": "元の WordPress 版では Instagram Graph API 連携で最新の投稿を表示していた部分。再構成版は JSON の投稿データから表示する静的モック。",
+  "note": "元の WordPress 版では Instagram Feed プラグインで最新の投稿を表示していた部分。再構成版は JSON の投稿データから表示する静的モック。",
   "posts": [
-    { "id": "n1", "image": "/images/news/news-01.png", "caption": "今週の限定バーガーはマッシュルームメルト。", "date": "2025-06-02" },
-    { "id": "n2", "image": "/images/news/news-02.png", "caption": "バンズの焼き上がりは毎朝10時。", "date": "2025-05-26" },
-    { "id": "n3", "image": "/images/news/news-03.png", "caption": "新作グッズのエコバッグが入荷しました。", "date": "2025-05-19" },
-    { "id": "n4", "image": "/images/news/news-04.png", "caption": "テイクアウトはお電話でもご予約いただけます。", "date": "2025-05-12" },
-    { "id": "n5", "image": "/images/news/news-05.png", "caption": "ピクルスの仕込み。今回はきゅうりと人参。", "date": "2025-05-05" },
-    { "id": "n6", "image": "/images/news/news-06.png", "caption": "ゴールデンウィークも通常営業です。", "date": "2025-04-28" }
+    {
+      "id": "n1",
+      "image": "/images/news/news-01.jpg",
+      "caption": "今週の限定バーガーはマッシュルームメルト。",
+      "date": "2025-06-02"
+    },
+    {
+      "id": "n2",
+      "image": "/images/news/news-02.jpg",
+      "caption": "バンズの焼き上がりは毎朝10時。",
+      "date": "2025-05-26"
+    },
+    {
+      "id": "n3",
+      "image": "/images/news/news-03.jpg",
+      "caption": "自家製ソースは毎朝、店で仕込んでいます。",
+      "date": "2025-05-19"
+    },
+    {
+      "id": "n4",
+      "image": "/images/news/news-04.jpg",
+      "caption": "新作のホワイトメルトを始めました。",
+      "date": "2025-05-12"
+    },
+    {
+      "id": "n5",
+      "image": "/images/news/news-05.jpg",
+      "caption": "野菜スティックが仲間入り。ディップを添えて。",
+      "date": "2025-05-05"
+    },
+    {
+      "id": "n6",
+      "image": "/images/news/news-06.jpg",
+      "caption": "パティは毎朝、手ごねで仕込んでいます。",
+      "date": "2025-04-28"
+    }
   ]
 }

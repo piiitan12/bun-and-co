@@ -15,7 +15,7 @@ export default function PhotoLoop() {
           <ul key={round} className={styles.list} aria-hidden={round === 1 ? true : undefined}>
             {images.map((img) => (
               <li key={`${round}-${img.src}`} className={styles.item}>
-                <Image src={img.src} alt={round === 0 ? img.alt : ""} width={800} height={600} sizes="300px" className={styles.img} />
+                <Image src={img.src} alt={round === 0 ? img.alt : ""} width={800} height={800} sizes="300px" className={styles.img} />
               </li>
             ))}
           </ul>

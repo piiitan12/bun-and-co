@@ -23,7 +23,7 @@
 }
 .imgWrap {
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
 }
 .img {
   width: 100%;
@@ -32,12 +32,30 @@
   transition: transform 0.5s $ease-out;
 }
 .body {
-  padding: $sp-4 $sp-4 $sp-4;
+  padding: $sp-5 $sp-5 $sp-6;
+  @include sp {
+    padding: $sp-4 $sp-3 $sp-5;
+  }
+}
+.roomy .body {
+  padding: $sp-5 $sp-4;
+  @include tablet {
+    padding: $sp-5 $sp-5 $sp-6;
+  }
+  @include pc {
+    padding: $sp-6 $sp-6 $sp-7;
+  }
 }
 .name {
   @include heading-en;
   font-size: $fs-md;
   line-height: 1.3;
+  word-break: auto-phrase; // 日本語を文節で折り返す（語の途中で切らない）
+  // SP の 2 列カードは幅が約 130px。「チーズスティック」（8 字）が 1 行に収まる大きさにする
+  @include sp {
+    font-size: $fs-base;
+    letter-spacing: 0.04em;
+  }
 }
 .price {
   margin-top: $sp-1;
@@ -47,9 +65,10 @@
 }
 .desc {
   margin-top: $sp-2;
-  font-size: $fs-xs;
-  line-height: 1.7;
+  font-size: $fs-sm;
+  line-height: 1.9;
   color: $color-ink-sub;
+  word-break: auto-phrase;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

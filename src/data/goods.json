@@ -1,16 +1,16 @@
 {
   "intro": [
-    "BUN & CO. では、バーガーだけでなくオリジナルデザインのグッズも販売しています。",
+    "BUN & CO. では、バーガーだけでなくオリジナルグッズも販売しています。",
     "普段使いしやすいキャップやTシャツなど、さまざまなアイテムをそろえました。",
     "ご来店の記念やお土産に、ぜひ手に取ってみてください。"
   ],
   "note": "※ 在庫には限りがあります。品切れの際はご容赦ください。",
   "items": [
-    { "id": "cap", "name": "ロゴキャップ", "price": 3200, "description": "刺繍ロゴ入り。フリーサイズ。", "image": "/images/goods/goods-01.png" },
-    { "id": "tshirt", "name": "ロゴTシャツ", "price": 3800, "description": "ホワイト／ブラック。S〜XL。", "image": "/images/goods/goods-02.png" },
-    { "id": "ecobag", "name": "エコバッグ", "price": 1500, "description": "マチつき。バーガーのテイクアウトにも。", "image": "/images/goods/goods-03.png" },
-    { "id": "badges", "name": "缶バッジセット", "price": 500, "description": "3個セット。", "image": "/images/goods/goods-04.png" },
-    { "id": "pin", "name": "ピンバッジ", "price": 700, "description": "バンズの形のピンバッジ。", "image": "/images/goods/goods-05.png" },
-    { "id": "notebook", "name": "ロゴノート", "price": 600, "description": "A5・方眼。", "image": "/images/goods/goods-06.png" }
+    { "id": "cap", "name": "キャップ", "price": 3200, "description": "ブラック。フリーサイズ。", "image": "/images/goods/goods-01.jpg" },
+    { "id": "tshirt", "name": "Tシャツ", "price": 3800, "description": "ホワイト。S〜XL。", "image": "/images/goods/goods-02.jpg" },
+    { "id": "ecobag", "name": "エコバッグ", "price": 1500, "description": "マチつき。バーガーのテイクアウトにも。", "image": "/images/goods/goods-03.jpg" },
+    { "id": "mug", "name": "マグカップ", "price": 1800, "description": "ブラック。店内と同じマグです。", "image": "/images/goods/goods-04.jpg" },
+    { "id": "bottle", "name": "ボトル", "price": 2800, "description": "ステンレス。保冷・保温。", "image": "/images/goods/goods-05.jpg" },
+    { "id": "notebook", "name": "リングノート", "price": 600, "description": "無地。", "image": "/images/goods/goods-06.jpg" }
   ]
 }

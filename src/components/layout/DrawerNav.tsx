@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { NavItem } from "@/types/data";
 import styles from "./DrawerNav.module.scss";
+import ExternalLink from "@/components/common/ExternalLink";
 
 type Props = { id: string; open: boolean; items: NavItem[]; onClose: () => void };
 
@@ -19,9 +20,9 @@ export default function DrawerNav({ id, open, items, onClose }: Props) {
               </li>
             ) : (
               <li key={item.label}>
-                <a href={item.href} className={`${styles.link} ${styles.external}`} onClick={onClose} tabIndex={open ? 0 : -1}>
+                <ExternalLink href={item.href} className={`${styles.link} ${styles.external}`} onClick={onClose} tabIndex={open ? 0 : -1}>
                   {item.label}
-                </a>
+                </ExternalLink>
               </li>
             ),
           )}

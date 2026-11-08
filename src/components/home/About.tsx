@@ -18,7 +18,7 @@ export default function About() {
           </div>
         </FadeIn>
         <FadeIn className={styles.imgCol} delay={150}>
-          <Image src="/images/about/about-01.png" alt="店内の様子（仮画像）" width={1200} height={800} sizes="(min-width: 1024px) 50vw, 100vw" className={styles.img} />
+          <Image src="/images/about/about-01.jpg" alt="黒い背景に立つバーガー" width={1200} height={800} sizes="(min-width: 1024px) 50vw, 100vw" className={styles.img} />
         </FadeIn>
       </div>
     </section>

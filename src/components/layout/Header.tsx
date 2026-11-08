@@ -10,6 +10,7 @@ import Logo from "@/components/common/Logo";
 import Icon from "@/components/common/Icon";
 import DrawerNav from "./DrawerNav";
 import styles from "./Header.module.scss";
+import ExternalLink from "@/components/common/ExternalLink";
 
 const globalNav = nav.global as NavItem[];
 const externalNav = nav.external as NavItem[];
@@ -50,7 +51,7 @@ export default function Header() {
             ))}
             {externalNav.map((item) => (
               <li key={item.label} className={styles.externalItem}>
-                <a href={item.href} className={`${styles.iconLink} ${item.icon === "uber" ? styles.delivery : ""}`} aria-label={`${item.label}（外部サイト・ダミーリンク）`}>
+                <ExternalLink href={item.href} className={`${styles.iconLink} ${item.icon === "uber" ? styles.delivery : ""}`} aria-label={`${item.label}（外部サイト・ダミーリンク）`}>
                   {item.icon === "uber" ? (
                     <>
                       <Image src="/images/icons/delivery.svg" alt="" width={110} height={110} className={styles.deliveryImg} />
@@ -61,7 +62,7 @@ export default function Header() {
                   ) : (
                     <Icon name="instagram" size={30} />
                   )}
-                </a>
+                </ExternalLink>
               </li>
             ))}
           </ul>

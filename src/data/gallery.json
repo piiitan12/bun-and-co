@@ -1,15 +1,45 @@
 {
-  "note": "トップの「写真が横に流れる帯」の写真。元テーマは食材（アボカド・パティ・オニオン・バンズ・ソースなど）の 10 枚。写真を用意したら src を差し替える",
+  "note": "トップの「写真が横に流れる帯」の写真。元テーマと同じく、バーガーとサイドの写真を交互に並べる",
   "images": [
-    { "src": "/images/burgers/burger-01.png", "alt": "厚切りのパティ（仮画像）" },
-    { "src": "/images/sides/side-01.png", "alt": "揚げたてのポテト（仮画像）" },
-    { "src": "/images/burgers/burger-02.png", "alt": "とろけるチーズ（仮画像）" },
-    { "src": "/images/sides/side-02.png", "alt": "スライスオニオン（仮画像）" },
-    { "src": "/images/burgers/burger-03.png", "alt": "焼き上げたバンズ（仮画像）" },
-    { "src": "/images/sides/side-03.png", "alt": "アボカドのスライス（仮画像）" },
-    { "src": "/images/burgers/burger-04.png", "alt": "自家製のソース（仮画像）" },
-    { "src": "/images/sides/side-04.png", "alt": "ソテーしたマッシュルーム（仮画像）" },
-    { "src": "/images/burgers/burger-05.png", "alt": "ピリ辛のチリソース（仮画像）" },
-    { "src": "/images/sides/side-05.png", "alt": "新鮮なレタス（仮画像）" }
+    {
+      "src": "/images/burgers/burger-01.jpg",
+      "alt": "チェダーのバーガー"
+    },
+    {
+      "src": "/images/sides/side-01.jpg",
+      "alt": "ポテトとオニオンリング"
+    },
+    {
+      "src": "/images/burgers/burger-02.jpg",
+      "alt": "パティ2枚のバーガー"
+    },
+    {
+      "src": "/images/sides/side-02.jpg",
+      "alt": "チキンナゲット"
+    },
+    {
+      "src": "/images/burgers/burger-03.jpg",
+      "alt": "アボカドのバーガー"
+    },
+    {
+      "src": "/images/sides/side-03.jpg",
+      "alt": "チーズスティック"
+    },
+    {
+      "src": "/images/burgers/burger-04.jpg",
+      "alt": "きのこのバーガー"
+    },
+    {
+      "src": "/images/sides/side-04.jpg",
+      "alt": "グリーンサラダ"
+    },
+    {
+      "src": "/images/burgers/burger-05.jpg",
+      "alt": "チリソースのバーガー"
+    },
+    {
+      "src": "/images/sides/side-05.jpg",
+      "alt": "野菜スティック"
+    }
   ]
 }

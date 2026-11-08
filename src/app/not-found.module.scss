@@ -1,0 +1,62 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.notFound {
+  background: $color-bg;
+}
+.inner {
+  text-align: center;
+}
+.code {
+  @include heading-en;
+  font-size: $fs-display-sp;
+  line-height: 1;
+  color: $color-gold-deep;
+  @include pc {
+    font-size: $fs-display-pc;
+  }
+}
+.en {
+  @include heading-en;
+  margin-top: $sp-4;
+  font-size: $fs-sm;
+  letter-spacing: 0.3em;
+  color: $color-accent;
+}
+.title {
+  margin-top: $sp-6;
+  font-size: $fs-xl;
+  line-height: 1.5;
+  @include pc {
+    font-size: $fs-2xl;
+  }
+}
+.text {
+  margin-top: $sp-5;
+  color: $color-ink-sub;
+}
+.back {
+  margin-top: $sp-7;
+}
+.backLink {
+  @include button-gold;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $sp-3 $sp-6;
+  margin-top: $sp-7;
+}
+.link {
+  @include heading-en;
+  font-size: $fs-sm;
+  color: $color-ink;
+  padding-bottom: $sp-1;
+  border-bottom: 1px solid $color-line;
+  transition: color 0.3s, border-color 0.3s;
+  &:hover {
+    color: $color-accent;
+    border-color: $color-accent;
+  }
+}

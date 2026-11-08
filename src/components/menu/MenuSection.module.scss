@@ -19,10 +19,10 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: $sp-4;
+  gap: $sp-6 $sp-4;
   @include tablet {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: $sp-5;
+    gap: $sp-7 $sp-6;
   }
   > li > div {
     height: 100%;

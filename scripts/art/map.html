@@ -1,0 +1,35 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<!-- ACCESS の地図（架空の店なので、実在の地図ではなく図にする）。1200×600 で撮る -->
+<style>
+html,body{margin:0;width:1200px;height:600px;background:#151515;overflow:hidden;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif}
+svg{display:block}
+.road{stroke:#3a3426;stroke-width:14;fill:none}
+.road-main{stroke:#5b4c22;stroke-width:28;fill:none}
+.label{fill:#b9a46a;font-size:20px;letter-spacing:.12em}
+.label-sm{fill:#8c7d55;font-size:17px;letter-spacing:.1em}
+</style></head><body>
+<svg width="1200" height="600" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#151515"/>
+  <!-- 街区 -->
+  <g fill="#1d1d1d">
+    <rect x="40" y="40" width="250" height="170"/><rect x="330" y="40" width="300" height="170"/><rect x="670" y="40" width="200" height="170"/><rect x="910" y="40" width="250" height="170"/>
+    <rect x="40" y="300" width="250" height="260"/><rect x="330" y="300" width="300" height="110"/><rect x="330" y="450" width="300" height="110"/><rect x="670" y="300" width="200" height="260"/><rect x="910" y="300" width="250" height="260"/>
+  </g>
+  <rect x="910" y="300" width="250" height="260" fill="#1f2a1f"/>
+  <text x="1035" y="440" text-anchor="middle" class="label-sm">○○公園</text>
+  <!-- 道 -->
+  <path class="road-main" d="M0 255 H1200"/>
+  <path class="road" d="M310 0 V600 M650 0 V600 M890 0 V600 M330 430 H630"/>
+  <text x="140" y="228" class="label">○○通り</text>
+  <!-- 駅 -->
+  <rect x="60" y="80" width="200" height="56" fill="#2a2a2a" stroke="#5b4c22" stroke-width="2"/>
+  <text x="160" y="116" text-anchor="middle" class="label">○○駅</text>
+  <path d="M160 136 V210" stroke="#5b4c22" stroke-width="3" stroke-dasharray="6 8"/>
+  <!-- 店 -->
+  <rect x="660" y="300" width="220" height="110" fill="none"/>
+  <circle cx="770" cy="352" r="70" fill="#dfa910" opacity=".12"/>
+  <path d="M770 380 c-26-32-40-52-40-70a40 40 0 0 1 80 0c0 18-14 38-40 70z" fill="#dfa910"/>
+  <circle cx="770" cy="310" r="15" fill="#151515"/>
+  <text x="770" y="420" text-anchor="middle" fill="#dfa910" font-size="26" font-weight="700" letter-spacing=".14em" font-family="Futura,'Avenir Next Condensed',sans-serif">BUN &amp; CO.</text>
+  <text x="770" y="448" text-anchor="middle" class="label-sm">○○駅から徒歩5分</text>
+</svg></body></html>

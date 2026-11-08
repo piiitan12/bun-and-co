@@ -21,7 +21,7 @@ export default function GoodsList() {
         {items.map((item, i) => (
           <li key={item.id}>
             <FadeIn delay={(i % 3) * 80}>
-              <MenuCard item={item} onSelect={(picked) => setSelected(picked as GoodsItem)} />
+              <MenuCard item={item} roomy onSelect={(picked) => setSelected(picked as GoodsItem)} />
             </FadeIn>
           </li>
         ))}

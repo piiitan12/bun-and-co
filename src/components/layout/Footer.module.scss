@@ -4,9 +4,9 @@
 .footer {
   background: $color-bg-dark;
   color: $color-white;
-  padding-top: $sp-8;
+  padding-top: $sp-9;
   @include pc {
-    padding-top: $sp-9;
+    padding-top: $sp-10;
   }
 }
 .inner {

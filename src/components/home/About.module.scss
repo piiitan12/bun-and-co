@@ -11,21 +11,21 @@
   @include pc {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: $sp-8;
+    gap: $sp-9;
   }
 }
 .lead {
   font-size: $fs-xl;
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: $sp-5;
+  margin-bottom: $sp-6;
   @include pc {
     font-size: $fs-2xl;
   }
 }
 .body {
   display: grid;
-  gap: $sp-3;
+  gap: $sp-4;
   color: $color-ink-sub;
 }
 .img {

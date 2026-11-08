@@ -1,0 +1,28 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.notice {
+  position: fixed;
+  left: 50%;
+  bottom: $sp-6;
+  z-index: 100;
+  max-width: calc(100% - #{$gutter-sp * 2});
+  padding: $sp-3 $sp-5;
+  font-size: $fs-sm;
+  line-height: 1.6;
+  text-align: center;
+  color: $color-white;
+  background: rgba($color-bg-dark, 0.92);
+  border: 1px solid rgba($color-gold, 0.5);
+  border-radius: $radius-sm;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, $sp-3);
+  transition: opacity 0.3s, transform 0.3s $ease-out, visibility 0.3s;
+  pointer-events: none;
+}
+.isVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}

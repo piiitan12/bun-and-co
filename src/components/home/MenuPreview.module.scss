@@ -7,17 +7,17 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: $sp-4;
+  gap: $sp-6 $sp-4;
   @include pc {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: $sp-5;
+    gap: $sp-6;
   }
   > li > div {
     height: 100%;
   }
 }
 .more {
-  margin-top: $sp-7;
+  margin-top: $sp-8;
   text-align: center;
 }
 .moreLink {

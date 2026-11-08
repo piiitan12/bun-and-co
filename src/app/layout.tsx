@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageTop from "@/components/layout/PageTop";
 import store from "@/data/store.json";
+import DummyNotice from "@/components/common/DummyNotice";
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main">{children}</main>
         <Footer />
         <PageTop />
+        <DummyNotice />
       </body>
     </html>
   );

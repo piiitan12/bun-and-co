@@ -7,6 +7,7 @@ import Logo from "@/components/common/Logo";
 import Icon from "@/components/common/Icon";
 import StoreInfo from "@/components/common/StoreInfo";
 import styles from "./Footer.module.scss";
+import ExternalLink from "@/components/common/ExternalLink";
 
 const footerNav = nav.footer as NavItem[];
 const socialNav = nav.social as NavItem[];
@@ -35,14 +36,14 @@ export default function Footer() {
           <ul className={styles.social} aria-label="SNS・外部サービス（ダミーリンク）">
             {socialNav.map((item) => (
               <li key={item.label}>
-                <a href={item.href} className={styles.socialLink}>
+                <ExternalLink href={item.href} className={styles.socialLink}>
                   {item.icon === "uber" ? (
                     <Image src="/images/icons/delivery.svg" alt="" width={110} height={110} className={styles.socialImg} />
                   ) : (
                     item.icon && <Icon name={item.icon} size={20} />
                   )}
                   {item.label}
-                </a>
+                </ExternalLink>
               </li>
             ))}
           </ul>

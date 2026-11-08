@@ -36,7 +36,7 @@ async function cdp() {
 async function waitServer() {
   for (let i = 0; i < 40; i++) {
     try {
-      if ((await fetch(`http://localhost:${PORT}${path}`)).ok) return;
+      if ((await fetch(`http://localhost:${PORT}${path}`)).status < 500) return; // 404 のページも撮れるように
     } catch {}
     await sleep(300);
   }

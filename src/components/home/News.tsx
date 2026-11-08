@@ -5,6 +5,7 @@ import type { NewsPost } from "@/types/data";
 import SectionTitle from "@/components/common/SectionTitle";
 import FadeIn from "@/components/common/FadeIn";
 import styles from "./News.module.scss";
+import ExternalLink from "@/components/common/ExternalLink";
 
 const posts = news.posts as NewsPost[];
 
@@ -32,9 +33,9 @@ export default function News() {
           ))}
         </ul>
         <p className={styles.more}>
-          <a href={store.links.instagram} className={styles.moreLink} aria-label="Instagram を見る（ダミーリンク）">
+          <ExternalLink href={store.links.instagram} className={styles.moreLink} aria-label="Instagram を見る（ダミーリンク）">
             VIEW MORE
-          </a>
+          </ExternalLink>
         </p>
       </div>
     </section>

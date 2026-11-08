@@ -3,14 +3,22 @@
 
 .title {
   @include heading-rule;
+  // 品数が少ないので MENU より間を広く取り、1 品ずつ見せる
+  margin-bottom: $sp-6;
+  @include pc {
+    margin-bottom: $sp-8;
+  }
 }
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: $sp-4;
+  gap: $sp-6 $sp-4;
   @include tablet {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: $sp-5;
+    gap: $sp-7 $sp-6;
+  }
+  @include pc {
+    gap: $sp-8 $sp-7;
   }
   > li > div {
     height: 100%;

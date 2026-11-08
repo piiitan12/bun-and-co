@@ -17,7 +17,10 @@ html {
 body {
   font-family: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
   font-size: $fs-base;
-  line-height: 1.8;
+  line-height: 2;
+  letter-spacing: 0.05em; // 字間を少し開けて、詰まった印象をなくす
+  word-break: auto-phrase; // 日本語を文節で折り返す（語の途中で切らない）
+  overflow-wrap: break-word; // 1 行に収まらない長い語だけは折る
   color: $color-ink;
   background: $color-bg;
   -webkit-font-smoothing: antialiased;
@@ -58,9 +61,16 @@ textarea {
   @include inner;
 }
 .section {
-  padding-block: $sp-8;
+  padding-block: $sp-9;
   @include pc {
-    padding-block: $sp-10;
+    padding-block: $sp-11;
+  }
+}
+// 各ページの最後の区画は、フッターの手前に広めの間を取る（全ページ共通）
+#main > .section:last-child {
+  padding-bottom: $sp-11;
+  @include pc {
+    padding-bottom: $sp-12;
   }
 }
 .grid-safe > * {

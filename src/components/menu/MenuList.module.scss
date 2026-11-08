@@ -2,9 +2,9 @@
 @use "@/styles/mixins" as *;
 
 .jump {
-  margin-bottom: $sp-7;
+  margin-bottom: $sp-8;
   @include pc {
-    margin-bottom: $sp-8;
+    margin-bottom: $sp-9;
   }
 }
 .jumpList {

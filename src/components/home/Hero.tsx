@@ -31,8 +31,8 @@ export default function Hero() {
         <p className={styles.title}>GRAND OPEN!</p>
       </div>
       <a href="#about" className={styles.scroll} aria-label="下へスクロール">
+        <span className={styles.scrollText}>SCROLL</span>
         <span className={styles.scrollLine} aria-hidden="true" />
-        SCROLL
       </a>
       <BgmToggle />
     </section>

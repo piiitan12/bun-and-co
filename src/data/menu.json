@@ -5,12 +5,48 @@
       "title": "BURGERS",
       "layout": "card",
       "items": [
-        { "id": "classic", "name": "CLASSIC BUN", "price": 1100, "description": "手ごねパティとレタス、トマト、自家製ソース。まずはこの一つから。", "image": "/images/burgers/burger-01.png" },
-        { "id": "double-cheddar", "name": "DOUBLE CHEDDAR", "price": 1450, "description": "パティ2枚にチェダーを2枚。濃厚さで選ぶなら。", "image": "/images/burgers/burger-02.png" },
-        { "id": "avocado-bacon", "name": "AVOCADO BACON", "price": 1500, "description": "厚切りベーコンとアボカド。さっぱりとこってりの両立。", "image": "/images/burgers/burger-03.png" },
-        { "id": "mushroom-melt", "name": "MUSHROOM MELT", "price": 1400, "description": "ソテーしたきのこととろけるチーズ。", "image": "/images/burgers/burger-04.png" },
-        { "id": "jalapeno-hot", "name": "JALAPEÑO HOT", "price": 1350, "description": "ハラペーニョとチリソース。辛さは3段階から。", "image": "/images/burgers/burger-05.png" },
-        { "id": "teriyaki-egg", "name": "TERIYAKI EGG", "price": 1300, "description": "照り焼きソースに半熟の目玉焼き。", "image": "/images/burgers/burger-06.png" }
+        {
+          "id": "classic",
+          "name": "CLASSIC BUN",
+          "price": 1100,
+          "description": "手ごねパティにチェダー、トマト、レタス、自家製ソース。まずはこの一つから。",
+          "image": "/images/burgers/burger-01.jpg"
+        },
+        {
+          "id": "double-smash",
+          "name": "DOUBLE SMASH",
+          "price": 1450,
+          "description": "押し焼きしたパティを2枚。生オニオンとチェダーで。",
+          "image": "/images/burgers/burger-02.jpg"
+        },
+        {
+          "id": "avocado-bacon",
+          "name": "AVOCADO BACON",
+          "price": 1500,
+          "description": "ベーコンとアボカド。さっぱりとこってりの両立。",
+          "image": "/images/burgers/burger-03.jpg"
+        },
+        {
+          "id": "mushroom-melt",
+          "name": "MUSHROOM MELT",
+          "price": 1400,
+          "description": "ソテーしたきのこととろけるチーズ。",
+          "image": "/images/burgers/burger-04.jpg"
+        },
+        {
+          "id": "chili-hot",
+          "name": "CHILI HOT",
+          "price": 1350,
+          "description": "ピリ辛のチリソースとチェダー。辛さは3段階から。",
+          "image": "/images/burgers/burger-05.jpg"
+        },
+        {
+          "id": "white-melt",
+          "name": "WHITE MELT",
+          "price": 1300,
+          "description": "とろけるホワイトチーズソースをたっぷりと。",
+          "image": "/images/burgers/burger-06.jpg"
+        }
       ]
     },
     {
@@ -18,12 +54,46 @@
       "title": "SIDE MENU",
       "layout": "card",
       "items": [
-        { "id": "fries", "name": "フライドポテト", "price": 450, "description": "皮つきのポテトを二度揚げ。", "image": "/images/sides/side-01.png" },
-        { "id": "onion-rings", "name": "オニオンリング", "price": 480, "description": "厚めの衣でさくさくに。", "image": "/images/sides/side-02.png" },
-        { "id": "chicken-bits", "name": "チキンビッツ", "price": 520, "description": "一口サイズのフライドチキン。", "image": "/images/sides/side-03.png" },
-        { "id": "coleslaw", "name": "コールスロー", "price": 380, "description": "キャベツとにんじんのさっぱりサラダ。", "image": "/images/sides/side-04.png" },
-        { "id": "pickles", "name": "ピクルス盛り合わせ", "price": 350, "description": "自家製の野菜ピクルス。", "image": "/images/sides/side-05.png" },
-        { "id": "green-salad", "name": "グリーンサラダ", "price": 550, "description": "ドレッシングは3種（シーザー／ごま／和風）から。", "image": "/images/sides/side-06.png", "options": ["シーザー", "ごま", "和風"] }
+        {
+          "id": "fries-rings",
+          "name": "ポテト＆オニオンリング",
+          "price": 550,
+          "description": "二度揚げのポテトと、厚めの衣のオニオンリング。",
+          "image": "/images/sides/side-01.jpg"
+        },
+        {
+          "id": "nuggets",
+          "name": "チキンナゲット",
+          "price": 520,
+          "description": "一口サイズのナゲット。ソースは2種から。",
+          "image": "/images/sides/side-02.jpg"
+        },
+        {
+          "id": "cheese-sticks",
+          "name": "チーズスティック",
+          "price": 500,
+          "description": "とろけるチーズを衣で包んで揚げました。",
+          "image": "/images/sides/side-03.jpg"
+        },
+        {
+          "id": "green-salad",
+          "name": "グリーンサラダ",
+          "price": 550,
+          "description": "ドレッシングは3種（シーザー／ごま／和風）から。",
+          "image": "/images/sides/side-04.jpg",
+          "options": [
+            "シーザー",
+            "ごま",
+            "和風"
+          ]
+        },
+        {
+          "id": "veggie-sticks",
+          "name": "野菜スティック",
+          "price": 450,
+          "description": "季節の野菜をスティックに。ディップを添えて。",
+          "image": "/images/sides/side-05.jpg"
+        }
       ]
     },
     {
@@ -32,12 +102,36 @@
       "layout": "list",
       "note": "すべて M / L サイズ：¥400",
       "items": [
-        { "id": "cola", "name": "コーラ / ゼロコーラ", "price": 400 },
-        { "id": "ginger", "name": "ジンジャーエール", "price": 400 },
-        { "id": "lemonade", "name": "レモネード", "price": 400 },
-        { "id": "iced-tea", "name": "アイスティー（レモン / ミルク）", "price": 400 },
-        { "id": "coffee", "name": "コーヒー（アイス / ホット）", "price": 400 },
-        { "id": "oolong", "name": "ウーロン茶", "price": 400 }
+        {
+          "id": "cola",
+          "name": "コーラ / ゼロコーラ",
+          "price": 400
+        },
+        {
+          "id": "ginger",
+          "name": "ジンジャーエール",
+          "price": 400
+        },
+        {
+          "id": "lemonade",
+          "name": "レモネード",
+          "price": 400
+        },
+        {
+          "id": "iced-tea",
+          "name": "アイスティー（レモン / ミルク）",
+          "price": 400
+        },
+        {
+          "id": "coffee",
+          "name": "コーヒー（アイス / ホット）",
+          "price": 400
+        },
+        {
+          "id": "oolong",
+          "name": "ウーロン茶",
+          "price": 400
+        }
       ]
     },
     {
@@ -45,9 +139,21 @@
       "title": "FLOATS",
       "layout": "list",
       "items": [
-        { "id": "cola-float", "name": "コーラフロート", "price": 580 },
-        { "id": "lemonade-float", "name": "レモネードフロート", "price": 580 },
-        { "id": "coffee-float", "name": "コーヒーフロート", "price": 600 }
+        {
+          "id": "cola-float",
+          "name": "コーラフロート",
+          "price": 580
+        },
+        {
+          "id": "lemonade-float",
+          "name": "レモネードフロート",
+          "price": 580
+        },
+        {
+          "id": "coffee-float",
+          "name": "コーヒーフロート",
+          "price": 600
+        }
       ]
     },
     {
@@ -55,10 +161,26 @@
       "title": "ALCOHOL",
       "layout": "list",
       "items": [
-        { "id": "craft-beer", "name": "クラフトビール", "price": 800 },
-        { "id": "highball", "name": "ハイボール", "price": 650 },
-        { "id": "lemon-sour", "name": "レモンサワー", "price": 600 },
-        { "id": "cassis", "name": "カシス（オレンジ / ソーダ）", "price": 650 }
+        {
+          "id": "craft-beer",
+          "name": "クラフトビール",
+          "price": 800
+        },
+        {
+          "id": "highball",
+          "name": "ハイボール",
+          "price": 650
+        },
+        {
+          "id": "lemon-sour",
+          "name": "レモンサワー",
+          "price": 600
+        },
+        {
+          "id": "cassis",
+          "name": "カシス（オレンジ / ソーダ）",
+          "price": 650
+        }
       ]
     }
   ]

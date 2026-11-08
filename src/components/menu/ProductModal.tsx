@@ -36,7 +36,7 @@ export default function ProductModal({ item, onClose }: Props) {
           </button>
           {item.image && (
             <div className={styles.imgWrap}>
-              <Image src={item.image} alt={item.name} width={800} height={600} sizes="(min-width: 768px) 480px, 90vw" />
+              <Image src={item.image} alt={item.name} width={800} height={800} sizes="(min-width: 768px) 480px, 90vw" />
             </div>
           )}
           <div className={styles.details}>

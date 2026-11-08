@@ -7,10 +7,10 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: $sp-2;
+  gap: $sp-3;
   @include pc {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: $sp-3;
+    gap: $sp-5;
   }
 }
 .item {
