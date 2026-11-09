@@ -75,6 +75,12 @@ npm run lint
 npm run build
 ```
 
+## 公開
+
+- Vercel（https://bun-and-co.vercel.app）。`main` に push すると本番に出し直される
+- 環境変数は `NEXT_PUBLIC_SITE_URL`（公開 URL。OGP 画像の絶対 URL に使う）の 1 つだけ
+- 架空の店の作品なので、検索結果には出さない（全ページに `noindex`、応答ヘッダーに `X-Robots-Tag`）。URL を渡して見てもらう前提
+
 ## 画像
 
 - 写真（メインビジュアル・メニュー・NEWS・ABOUT）は、元サイトと同じフリー素材。メニューの写真は元サイトと同じ正方形で使う

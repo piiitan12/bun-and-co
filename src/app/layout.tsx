@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     template: `%s｜${store.name}`,
   },
   description: store.description,
+  // 架空の店の作品なので検索結果に出さない（実在の店と間違われないように）。URL を渡して見てもらう前提
+  robots: { index: false, follow: false },
   openGraph: {
     title: `${store.name}｜クラフトバーガー専門店`,
     description: store.description,
