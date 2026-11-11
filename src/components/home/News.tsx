@@ -9,7 +9,7 @@ import ExternalLink from "@/components/common/ExternalLink";
 
 const posts = news.posts as NewsPost[];
 
-/** 投稿グリッド。元は Instagram Graph API 連携。再構成版は news.json からの静的モック */
+/** 投稿グリッド。元の WordPress 版は Instagram Feed プラグインのショートコード（Graph API 版は試作のみ）。再構成版は news.json からの静的モック */
 export default function News() {
   return (
     <section id="news" className={`section ${styles.news}`}>

@@ -5,7 +5,7 @@ import styles from "./not-found.module.scss";
 
 export const metadata: Metadata = {
   title: "ページが見つかりません",
-  robots: { index: false },
+  robots: { index: false, follow: false },
 };
 
 // 迷った人の次の行き先。TOP はボタンで出すので、ここからは外す

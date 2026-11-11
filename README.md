@@ -21,7 +21,7 @@ src/
   app/                 ページ（TOP・MENU・GOODS・CONTACT・PRIVACY POLICY・404）
   components/
     layout/            全ページ共通（Header・DrawerNav・Footer・PageTop）
-    common/            複数ページで使う小さな部品（Logo・StoreInfo・SectionTitle・Icon・FadeIn）
+    common/            複数ページで使う小さな部品（Logo・StoreInfo・SectionTitle・Icon・FadeIn・ExternalLink・DummyNotice）
     home/ menu/ goods/ contact/   そのページの部品
   data/                文言・商品・店舗情報（JSON）
   styles/              色・余白・文字の段階の変数と mixin
@@ -29,7 +29,7 @@ src/
 
 - **「どこで使うか」で置き場を分けた。**全ページ共通は `layout/`、2 ページ以上で使うものは `common/`、1 ページだけのものはページ名のフォルダ。部品を直すとき、影響する範囲がフォルダ名で分かる
 - **同じ見た目は同じ部品にした。**商品カード（`MenuCard`）と詳細モーダル（`ProductModal`）は、トップ・MENU・GOODS の 3 か所で同じものを使う。店舗情報（`StoreInfo`）はフッターと ACCESS で共用
-- **状態を持つ部品だけをクライアントコンポーネントにした**（ヘッダーの開閉・BGM・モーダル・フォームなど）。それ以外はサーバーで HTML にする
+- **状態か、ブラウザの機能（画面に入ったかの検知・`<dialog>` など）やクリックの処理を持つ部品だけをクライアントコンポーネントにした**（ヘッダーの開閉・BGM・モーダル・フォーム・フェードインなど）。それ以外はサーバーで HTML にする
 
 部品ごとの理由は [`docs/設計の意図.md`](docs/設計の意図.md)。各ページのスクリーンショット（375px／1440px）は `docs/screenshots/`。
 
@@ -51,7 +51,7 @@ src/
 
 画像は `public/images/burgers/` に置く。これで MENU ページにカードが 1 枚増え、押すと同じ形の詳細モーダルが開く。カテゴリを足すときも `sections` に 1 件足せば、見出し・ページ内リンク・一覧がそろって増える。
 
-店名を変えるときは、`store.json` の `name`（ロゴ・ページのタイトル）、`nameShort`（ロゴの小さな店名）、`copyright` の 3 つを直せば、全ページで変わる。
+店名を変えるときは、`store.json` の `name`（ロゴ・ページのタイトル）、`nameShort`（ロゴの小さな店名）、`copyright` の 3 つを直せば、ロゴ・ページのタイトル・コピーライトが全ページで変わる。紹介文（`store.json` の `about`・`description`）、グッズの説明（`goods.json`）、プライバシーポリシー（`privacy.json`）の文中の店名は、それぞれ別に直す。
 
 ## WordPress 版との違い
 
